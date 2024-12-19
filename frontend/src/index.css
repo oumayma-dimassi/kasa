@@ -69,16 +69,11 @@ footer{
 }
 
 
-.nature{
-  width: 95%;
-  height: 130px;
-  padding: 10px;
-  margin-left: 30px;
+.Banner{
+  width: 90%;
+  height: 160px;
+  margin: 30px;
   display: inline-block;
-  background-image: url('./assets/image-acceuil.png');
-  background-repeat: round;
-  background-blend-mode: multiply;
-  background-color: #0009;
   border-radius: 30px;
 }
 .imgtext{
