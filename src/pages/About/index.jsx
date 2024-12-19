@@ -1,9 +1,9 @@
 
 function About () {
     return (
-      <div>
+      <main>
         A Propos
-      </div>
+      </main>
     );
   }
   

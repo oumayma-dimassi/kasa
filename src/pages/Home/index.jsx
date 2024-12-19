@@ -1,9 +1,11 @@
 
-
 function Home() {
   return (
-    <div>Home
-    </div>
+    <main>
+      <div className="nature">
+      <p className="imgtext">Chez vous, partout et ailleurs</p>
+      </div>
+    </main>
   );
 }
 
