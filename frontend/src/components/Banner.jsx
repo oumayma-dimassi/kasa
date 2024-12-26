@@ -1,6 +1,12 @@
 
-export default function Banner ({image}) {
+export default function Banner ({imageSrc, text}) {
 return (
-    <figure><img className="Banner" src={image} alt="image nature"/></figure>
+   <div className="container">
+      <figure>
+        <img src={imageSrc} alt="image nature" className="banner" />
+      </figure>
+      <p className="imgtext"> {text} </p>
+    </div>
   );
+  
 }

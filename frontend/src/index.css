@@ -69,16 +69,77 @@ footer{
 }
 
 
-.Banner{
+.banner{
   width: 90%;
   height: 160px;
   margin: 30px;
   display: inline-block;
   border-radius: 30px;
+  filter: brightness(50%);
 }
+
 .imgtext{
+  font-size: 44px;
+  line-height: 68.45px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: white;  
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  position: relative;
   text-align: center;
-  padding: 34px;
+}
+
+.cards{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px 100px;
+  background-color: #f7f8fb;
+  border-radius: 10px;
+  padding: 55px;
+}
+
+.card{
+  background-color: #FF6060;
+  height: 340px;
+  width: 340px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cardDescription{
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  font-size: 21px;
+  color: whitesmoke;
+}
+
+.btn{
+  background-color: #FF6060;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.collapse{
+  width: 84%;
+  margin: 12px 8%;
+  border-block: none;
+  border: beige;
+}
+.textcollapse{
+  display: flex;
+  justify-content: space-between;
   color: white;
-  font-size: xx-large;
+  font-size: x-large;
+  padding-top: 11px;
 }
