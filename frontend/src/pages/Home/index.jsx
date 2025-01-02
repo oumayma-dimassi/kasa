@@ -2,6 +2,7 @@ import Banner from "../../components/Banner";
 import image from "../../assets/image-acceuil.png"
 import Card from "../../components/Card";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
 
@@ -19,7 +20,9 @@ function Home() {
       <Banner imageSrc={image} text="Chez vous, partout et ailleurs"/>
       <div className="cards">
         {records.map((property)=>(
-            <Card key={property.id} image={property.cover} description={property.title} />
+            <Link to={`/Apartement/${property.id}`} key={property.id}>
+             <Card key={property.id} image={property.cover} description={property.title}  />
+            </Link> 
         ))} 
       </div> 
     </main>

@@ -40,8 +40,9 @@ footer{
 .headerRight a {
   padding: 15px;
     color: #8186a0;
-    text-decoration: none;
+    text-decoration:underline;
     font-size: 18px;
+  
 }
 
 .notfoundTitle {
@@ -71,7 +72,7 @@ footer{
 
 .banner{
   width: 90%;
-  height: 160px;
+  height: 195px;
   margin: 30px;
   display: inline-block;
   border-radius: 30px;
@@ -128,12 +129,12 @@ footer{
   height: 50px;
   border-radius: 10px;
   cursor: pointer;
+  
 }
 
 .collapse{
-  width: 84%;
-  margin: 12px 8%;
-  border-block: none;
+  width: 80%;
+  margin: 12px 10%;
   border: beige;
 }
 .textcollapse{
@@ -143,3 +144,79 @@ footer{
   font-size: x-large;
   padding-top: 11px;
 }
+.img{
+  width: 1600px;
+  height: 415px;
+  margin-top: 40px;
+  margin-left: 33px;
+  display: inline-block;
+  border-radius: 30px;
+}
+.title{
+  color: #FF6060;
+  margin-top: 40px;
+  margin-left: 33px;
+}
+.location{
+  margin-top: 40px;
+  margin-left: 33px;
+  
+}
+.tag{
+margin-left: 33px;
+  background-color: #FF6060;
+  height: 50px;
+  border-radius: 125px;
+  cursor: pointer;
+  width: 180px;
+  border: beige;
+}
+
+.texttag{
+  color: white;
+  font-size:large;
+  padding-top: 5px;
+}
+
+.descriptionBloc{
+  display: flex;
+flex-direction: row;
+
+}
+
+
+.descriptionBloc div{
+  display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 40px;
+    margin-left: px;  
+}
+
+.hidden {
+  height: 1px;
+}
+
+
+.text-container {
+  overflow: hidden;
+}
+
+.text-container p {
+  transform: translate3d(0, -200%, 0);
+  -webkit-transition: transform 0s cubic-bezier(0, 0, 0.21, 1);
+  transition: transform 0s cubic-bezier(0, 0, 0.21, 1);
+  margin: 12px 10%;
+}
+
+.text-container.revealed p {
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: transform 0.45s cubic-bezier(0, 0, 0, 0);
+  transition: transform 0.45s cubic-bezier(0, 0, 0, 0);
+}
+.stars{
+  margin-left: 1440px;
+  
+}
+
+
