@@ -1,12 +1,19 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 1440px;
+  margin: auto;
 }
+header{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: 10px 20px 10px 20px;
 
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -30,18 +37,22 @@ footer{
 
 .headerRight{
   position : absolute;
-  right : 0;
   top: 25px;
-  margin-right : 25px;
+  right: 150px;
+  margin-right : 45px;
   display : flex;
   gap: 15px;
 }
 
 .headerRight a {
-  padding: 15px;
-    color: #8186a0;
-    text-decoration:underline;
+    color: black;
     font-size: 18px;
+    text-decoration: none;
+  
+}
+.headerRight a:hover {
+  color: black;
+  border-bottom: 1px solid black;
   
 }
 
@@ -79,6 +90,8 @@ footer{
   filter: brightness(50%);
 }
 
+
+
 .imgtext{
   font-size: 44px;
   line-height: 68.45px;
@@ -87,9 +100,8 @@ footer{
   text-decoration-skip-ink: none;
   color: white;  
   position: absolute;
-  top: 29%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 18%;
+  left: 29%;
 }
 
 .container {
@@ -155,12 +167,9 @@ footer{
 .title{
   color: #FF6060;
   margin-top: 40px;
-  margin-left: 33px;
 }
 .location{
-  margin-top: 40px;
-  margin-left: 33px;
-  
+  margin-top: 40px;  
 }
 .tag{
 margin-left: 33px;
@@ -170,6 +179,10 @@ margin-left: 33px;
   cursor: pointer;
   width: 180px;
   border: beige;
+}
+
+.tags{
+  margin-bottom: 44px;
 }
 
 .texttag{
@@ -189,8 +202,8 @@ flex-direction: row;
   display: flex;
     flex-direction: column;
     width: 50%;
-    margin-top: 40px;
-    margin-left: px;  
+    margin-top: 30px;
+    margin-left: 40px;  
 }
 
 .hidden {
@@ -207,6 +220,7 @@ flex-direction: row;
   -webkit-transition: transform 0s cubic-bezier(0, 0, 0.21, 1);
   transition: transform 0s cubic-bezier(0, 0, 0.21, 1);
   margin: 12px 10%;
+  background-color: #80808012;
 }
 
 .text-container.revealed p {
@@ -215,8 +229,148 @@ flex-direction: row;
   transition: transform 0.45s cubic-bezier(0, 0, 0, 0);
 }
 .stars{
-  margin-left: 1440px;
-  
+  margin-bottom: 33px;
 }
 
 
+#banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 470px;
+	position: relative;
+}
+
+#banner .arrow {
+	position: absolute;
+}
+#banner .arrow_left {
+	left: 10px;
+	cursor: pointer;
+}
+#banner .arrow_right {
+	right: 10px;
+	cursor: pointer;
+}
+/* Gestion des points du carrousel */
+#dots {
+	position: absolute;
+	bottom: 40px;
+	display: flex;
+}
+.dot {
+	margin-inline: 5px;
+	width: 13px;
+	height: 13px;
+	background-color: #ffffff00;
+	border: 3px solid #fff;
+	border-radius: 100%;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+}
+.dot_selected {
+	background-color: #fff;
+}
+/* Fin du code CSS pour le carousel */
+#banner p {
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 900;
+	font-size: 50px;
+	line-height: 66px;
+	color: white;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	text-align: center;
+}
+#banner span {
+	display: block;
+	font-weight: 400;
+	font-size: 30px;
+}
+
+.banner-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	object-fit: cover;
+	object-position: center;
+  border-radius: 25px;
+}
+.pic{
+  border-radius: 58px;
+  object-fit: cover;
+}
+
+#counter{
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
+.name{
+  margin-top: 5%;
+  color: #FF6060;
+}
+
+.host{
+  margin-bottom: 30px;
+  margin-top: 38px;
+  gap: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.left, .right{
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-appartment{
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapse-item {
+  width: 50%;
+}
+
+@media (max-width: 1024px) {
+
+  .banner{
+    width: 100%;
+    margin: 0;
+  }
+
+  .cards{
+    background-color: unset;
+  }
+
+  #logo {
+    width: 50%;
+  }
+
+  .headerRight {
+    top: 33px;
+    right: 12px;
+  }
+
+  .imgtext{
+    font-size: 31px;
+    line-height : unset;
+    left: 16%;
+    top: 9%;
+    transform : unset;
+  }
+
+  .flex-appartment{
+    flex-direction: column;
+  }
+
+  .tag {
+    margin-left: unset;
+    width: 100%;
+  }
+
+}
