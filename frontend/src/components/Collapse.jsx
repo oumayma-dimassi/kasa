@@ -1,42 +1,39 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 
 function Collapse({ text, content, css }) {
-  const [visible, setVisible] = useState(false);
+
+  const [isExpanded, setIsExpanded] = useState(false);
+  const toggleIsExpanded = useCallback(() => {
+    setIsExpanded((isExpanded) => !isExpanded);
+  }, []);
 
   const style = {
-    transform: visible ? 'rotate(-180deg)' : '',
+    transform: isExpanded ? 'rotate(-180deg)' : '',
     transition: 'transform 500ms ease',
   }
 
   let result;
 
-  if(Array.isArray(content)){
+  if (Array.isArray(content)) {
     result = content.map((item) => (
       <li key={item} className='inline'>{item}</li>
     ));
-  }else{
+  } else {
     result = content;
   }
-
-
-
 
   return (
     <div className={css}>
 
-      <button className='btn collapse textcollapse collapse1' onClick={() => setVisible(!visible)}>
-        {text}
+      <button className='btn collapse textcollapse collapse1' onClick={toggleIsExpanded}>{text}
         <i class="fa-solid fa-angle-up" style={style}></i>
       </button>
-
-      <div className={`text-container ${visible ? 'revealed' : 'hidden'}`}>
-        <p>{result}</p>
+      <div
+        className="collapse-elem"
+        style={{ height: isExpanded ? "180px" : "0px" }}>
+        <p className='collapse-text'> {result} </p>
       </div>
-
     </div>
-
-
-
   )
 }
 

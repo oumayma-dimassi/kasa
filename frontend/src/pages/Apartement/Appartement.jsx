@@ -48,7 +48,7 @@ function Apartement() {
         <div className="two">
           <Picture source={picture} name={name} />
         </div>
-        <div className="stars">
+        <div >
           <Stars rating={record.rating} />
         </div>
 
@@ -58,7 +58,7 @@ function Apartement() {
 
         </div>
 
-        <div className="flex-appartment">
+        <div className="flex-collapse">
         <Collapse css="collapse-item1 collapse1" text="Description" content={record.description} />
         <Collapse css="collapse-item2 collapse2" text="Equipement" content={equipments} />
       </div>

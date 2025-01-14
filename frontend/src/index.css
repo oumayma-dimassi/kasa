@@ -7,11 +7,17 @@ body {
   max-width: 1440px;
   margin: auto;
 }
+
+#root{
+  margin-left: 25px;
+  margin-right: 15px;
+}
+
 header{
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-margin: 10px 20px 10px 20px;
+margin: 10px 20px 10px 0px;
 
 }
 code {
@@ -36,11 +42,11 @@ footer{
 }
 
 .headerRight{
-  position : absolute;
-  top: 25px;
-  right: 150px;
-  margin-right : 45px;
-  display : flex;
+  position: absolute;
+  top: 55px;
+  right: 18px;
+  margin-right: 45px;
+  display: flex;
   gap: 15px;
 }
 
@@ -150,7 +156,7 @@ footer{
 }
 
 .collapse1{
-  width: 95%;
+  width: 100%;
 }
 
 .collapse2{
@@ -182,15 +188,15 @@ footer{
 }
 .tag{
   background-color: #FF6060;
-  height: 50px;
+  height: 42px;
   border-radius: 125px;
   cursor: pointer;
-  width: 180px;
+  width: 170px;
   border: beige;
 }
 
 .tags{
-  margin-bottom: 44px;
+  margin-bottom: 10px;
   display: flex;
   gap: 12px;
 }
@@ -268,24 +274,7 @@ flex-direction: row;
 	right: 10px;
 	cursor: pointer;
 }
-/* Gestion des points du carrousel */
-#dots {
-	position: absolute;
-	bottom: 40px;
-	display: flex;
-}
-.dot {
-	margin-inline: 5px;
-	width: 13px;
-	height: 13px;
-	background-color: #ffffff00;
-	border: 3px solid #fff;
-	border-radius: 100%;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
-}
-.dot_selected {
-	background-color: #fff;
-}
+
 /* Fin du code CSS pour le carousel */
 #banner p {
 	font-family: 'Roboto Slab', sans-serif;
@@ -314,8 +303,8 @@ flex-direction: row;
 .pic{
   border-radius: 58px;
   object-fit: cover;
-  width: 50%;
-  height: 50%;
+  width: 64px;
+  height: 64px;
 }
 
 #counter{
@@ -331,7 +320,7 @@ flex-direction: row;
 
 
 .hostpicture{
-  gap: 10px;
+  gap: 51px;
   display: flex;
   margin: unset;
 }
@@ -363,6 +352,7 @@ flex-direction: row;
   gap: 50px;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 25px;
+  grid-row-gap: 15px;
 }
 
 .one {
@@ -405,8 +395,9 @@ flex-direction: row;
   }
 
   .headerRight {
-    top: 33px;
-    right: 12px;
+    top: 34px;
+    right: 0px;
+    gap: 25px;
   }
 
   .imgtext{
@@ -424,7 +415,9 @@ flex-direction: row;
 
   .tag {
     margin-left: unset;
-    width: 100%;
+    height: 35px;
+
+  width: 147px;
   }
   .list{
     display: flex;
@@ -455,6 +448,59 @@ flex-direction: row;
     flex-direction: row;
   }
 
+  .collapse-item1, .collapse-item2 {
+    width: unset;
+  }
+
+  .flex-collapse{
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 15px;
+  }
+
+  .star{
+    width: 26px;
+    height: 26px;
+  }
+
+  .stars{
+    position: absolute;
+    left: 0;
+  }
+
+  .pic{
+    width: 32px;
+    height: 32px;
+  }
+
+  .name{
+    margin-top: -9px;
+  }
+
+  .nameItem {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.tags{
+  margin-bottom: 0px;
+}
+
+.title{
+  font-size: 16px;
+}
+
+.location {
+  font-size: 14px;
+}
+.hostpicture{
+  gap: 15px;
+}
+#root{
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
 }
 
 li{
@@ -462,10 +508,29 @@ li{
   padding: 5px 20px;
 }
 
+.flex-collapse{
+  display: flex;
+  gap: 50px;
+}
 
 
 .abouts{
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+
+.collapse-elem {
+  transition-property: height;
+  transition-duration: 500ms;
+  overflow: hidden;
+  background-color: #80808012;
+}
+
+.collapse-text{
+  padding: 15px 10px;
+  font-family: 'Roboto Slab', sans-serif;
+  margin-right: 5%;
+  margin-top: unset;
 }
