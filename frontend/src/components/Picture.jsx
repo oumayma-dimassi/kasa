@@ -1,15 +1,27 @@
  
 export default function Picture({source,name}){
 
+  let result;
+
+  if(name != undefined){
+    let words = name.split(" ");
+
+    result = words.map((item) => (
+      <p className="nameItem">{item} </p>
+    ));
+  }
+  
+ 
+
     return (
-       <div className="">
+       <>
           
-          <figure className="host">
-          <h3 className="name">{name}</h3>
+          <figure className="hostpicture">
+          <h4 className="name">{result}</h4>
             <img src={source} alt="image homme" className="pic" />
           </figure>
           
-        </div>
+        </>
       );
 } 
 

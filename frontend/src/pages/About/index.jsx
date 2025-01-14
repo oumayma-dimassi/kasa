@@ -8,7 +8,11 @@ function About () {
       <main>
         <Banner imageSrc={image} text=""/>
 
+<div className="abouts">
         {myData.map((item)=>(<Collapse text={item.title} content={item.content}/>))}
+
+        
+</div>
         
       </main>
       
