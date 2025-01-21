@@ -8,8 +8,9 @@ import Picture from "../../components/Picture";
 import Slider from "../../components/Slider";
 
 
-function Apartement() {
+export default function Apartement() {
   const params = useParams();
+
   const [record, setRecord] = useState([]);
   const [tags, setTags] = useState([]);
   const [slides, setSlides] = useState([]);
@@ -22,23 +23,22 @@ function Apartement() {
       .then(res => res.json())
       .then(data => {
         if (data === "Not found") {
-          window.location.href = '/404';
+          window.location.href = '/NotFound';
+        }else{
+          setRecord(data);
+          setTags(data.tags);
+          setSlides(data.pictures);
+          setPicture(data.host.picture);
+          setName(data.host.name);
+          setEquipments(data.equipments);
         }
-        setRecord(data);
-        setTags(data.tags);
-        setSlides(data.pictures);
-        setPicture(data.host.picture);
-        setName(data.host.name)
-        setEquipments(data.equipments)
-
       }
-      );
-  }, []);
+      ); 
+  }, [params.id]);
 
   return (
     <main>
       <Slider slides={slides}></Slider>
-
 
       <div className="grid">
         <div className="one">
@@ -59,12 +59,11 @@ function Apartement() {
         </div>
 
         <div className="flex-collapse">
-        <Collapse css="collapse-item1 collapse1" text="Description" content={record.description} />
-        <Collapse css="collapse-item2 collapse2" text="Equipement" content={equipments} />
+        <Collapse text="Description" content={record.description} />
+        <Collapse text="Equipement" content={equipments} />
       </div>
 
     </main>
   );
 }
 
-export default Apartement;

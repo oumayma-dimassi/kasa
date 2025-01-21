@@ -3,7 +3,7 @@ import arrowLeft from "../assets/arrow_back.png"
 import arrowRight from "../assets/arrow_forward.png"
 
 
-function Slider({ slides }) {
+export default function Slider({ slides }) {
 
   const [position, setPosition] = useState(0);
 
@@ -18,15 +18,17 @@ function Slider({ slides }) {
 
   return (
     <div id="banner">
-      <img id="banner-img" src={`${slides[position]}`} alt="Banner Print-it" className="banner-img" />
-      <img id="arrow_right" src={arrowRight} className="arrow arrow_right" onClick={() => handleArrowClick('right')} />
-      <img id="arrow_left" src={arrowLeft} className="arrow arrow_left" onClick={() => handleArrowClick('left')} />
+      <img id="banner-img" src={`${slides[position]}`} alt="Banner" className="banner-img" />
+      {slides.length > 1 &&
+        <img id="arrow_right" src={arrowRight} className="arrow arrow_right" alt="arrow_right" onClick={() => handleArrowClick('right')} />
+      }
+
+      {slides.length > 1 &&
+        <img id="arrow_left" src={arrowLeft} className="arrow arrow_left" alt="arrow_left" onClick={() => handleArrowClick('left')} />
+      }
 
       <h2 id="counter"> {position + 1} / {slides.length}</h2>
-
     </div>
 
   );
 }
-
-export default Slider;

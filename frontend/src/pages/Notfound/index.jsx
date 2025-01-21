@@ -1,7 +1,6 @@
-
-function Notfound () {
+export default function Notfound () {
   return (
-    <main >
+    <main >     
       <p className="notfoundTitle">404</p>
       <p className="notfoundText">Oups! La page que vous demandez n'existe pas.</p>
       <a  href="/" >
@@ -11,4 +10,3 @@ function Notfound () {
   );
 };
 
-export default Notfound
