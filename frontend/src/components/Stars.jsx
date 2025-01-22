@@ -9,7 +9,7 @@ export default function Stars({ rating }) {
     return (
         <div className="stars">
             <span>
-                {stars.map((element, index) => (<img key={index} src={`${element <= rating ? active : inactive}`} alt="star" className="star" />))}
+                {stars.map((element) => (<img key={element} src={`${element <= rating ? active : inactive}`} alt="star" className="star" />))}
             </span>
         </div>
     );
