@@ -1,4 +1,4 @@
-export default function card({ image, description }) {
+export default function Card({ image, description }) {
   return (
     <div className="container">
       <img className="card" src={image} alt={description} />
