@@ -3,7 +3,6 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   max-width: 1440px;
   margin: auto;
 }
@@ -315,6 +314,11 @@ footer{
   color: #FF6060;
   margin-top: unset;
   margin-left: 40px;
+  text-align: right;
+}
+
+.nameItem{
+  margin : 5px 0;
 }
 
 
@@ -386,6 +390,7 @@ footer{
   .banner{
     width: 100%;
     margin: 0;
+
   }
 
   .cards{
@@ -404,8 +409,9 @@ footer{
     margin-right: 42px;
   }
 
-
-
+  #banner .arrow_left, #banner .arrow_right {
+    width: 40px;
+  }
 
   .imgtext{
     font-size: 31px;
@@ -453,6 +459,9 @@ footer{
 
   .flex-appartment {
     flex-direction: row;
+  }
+  #counter {
+    display: none;
   }
 
   .flex-collapse{

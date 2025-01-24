@@ -1,7 +1,7 @@
 import Banner from "../../components/Banner";
 import Collapse from "../../components/Collapse";
 import image from "../../assets/imagenature2.png"
-import myData from '../../data/collapse.json';
+import myData from '../../data/apropos.data.json';
 
 export default function  About() {
   return (
